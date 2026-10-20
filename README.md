@@ -2,8 +2,6 @@
 
 A price-monitoring agent that decides, not just logs. It uses the [Decodo Web Data API](https://decodo.com/web-data-api) to find new products with `/map`, track competitor prices with `/crawl`, and recheck pages and AI answers with `/scrape`. Python extracts prices and finds what changed. Simple rules log routine changes, and an LLM agent decides the rest: log it, alert a person, propose a price change for approval, or recheck the page.
 
-![The /map, /crawl, and /scrape endpoints of the Decodo Web Data API send new SKUs, prices, and AI answers to Python code, which extracts, diffs, and applies simple rules, then sends events to Claude. Claude decides, can reverify a page through /scrape, and sends alerts and proposals to you for approval.](docs/architecture.png)
-
 The agent works only with numbers that Python computed in `diff.py`. It never reads raw HTML. `rules.py` logs the events a rule can decide, such as a price change under 5%, so the agent sees only the events that need judgment. The agent proposes, and a person approves. Nothing in this repo writes to a live pricing system.
 
 ## Quickstart
