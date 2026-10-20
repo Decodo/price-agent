@@ -1,0 +1,163 @@
+{
+ "note": "Events the crawl fixture can't produce. map_day and a1-a4 are from live runs on 2026-10-14; a5 and a6 are constructed edge cases for the policy's log branches.",
+ "map_day": [
+  {
+   "id": "e1",
+   "kind": "new_product",
+   "url": "https://scrapeme.live/shop/Stakataka",
+   "offer_key": "https://scrapeme.live/shop/Stakataka#1947",
+   "name": "Stakataka",
+   "core_sku": false,
+   "currency": "GBP",
+   "new_price": "190.00",
+   "new_availability": "in_stock",
+   "history": [
+    "190.00"
+   ],
+   "flags": []
+  },
+  {
+   "id": "e2",
+   "kind": "new_product",
+   "url": "https://scrapeme.live/shop/Naganadel",
+   "offer_key": "https://scrapeme.live/shop/Naganadel#9798",
+   "name": "Naganadel",
+   "core_sku": false,
+   "currency": "GBP",
+   "new_price": "30.00",
+   "new_availability": "in_stock",
+   "history": [
+    "30.00"
+   ],
+   "flags": []
+  }
+ ],
+ "ai_shelf": [
+  {
+   "id": "a1",
+   "kind": "ai_misquote",
+   "url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "offer_key": "google_ai_mode:Best Buy:https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "name": "Sony WH-1000XM6",
+   "core_sku": true,
+   "currency": "USD",
+   "new_price": "425.49",
+   "our_price": "459.99",
+   "gap_pct": -7.1,
+   "history": [
+    "398.00",
+    "425.49"
+   ],
+   "flags": [],
+   "surface": "google_ai_mode",
+   "retailer": "Best Buy",
+   "live_price": "458.00",
+   "own_store": false
+  },
+  {
+   "id": "a2",
+   "kind": "ai_misquote",
+   "url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "offer_key": "chatgpt:Best Buy:https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "name": "Sony WH-1000XM6",
+   "core_sku": true,
+   "currency": "USD",
+   "new_price": "378.00",
+   "our_price": "459.99",
+   "gap_pct": -17.5,
+   "history": [
+    "378.00",
+    "378.00"
+   ],
+   "flags": [],
+   "surface": "chatgpt",
+   "retailer": "Best Buy",
+   "live_price": "458.00",
+   "own_store": false
+  },
+  {
+   "id": "a3",
+   "kind": "ai_misquote",
+   "url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "offer_key": "chatgpt:Walmart:https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "name": "Sony WH-1000XM6",
+   "core_sku": true,
+   "currency": "USD",
+   "new_price": "398.00",
+   "our_price": "459.99",
+   "gap_pct": -13.1,
+   "history": [
+    "398.00",
+    "398.00"
+   ],
+   "flags": [],
+   "surface": "chatgpt",
+   "retailer": "Walmart",
+   "live_price": "458.00",
+   "own_store": false
+  },
+  {
+   "id": "a4",
+   "kind": "ai_misquote",
+   "url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "offer_key": "chatgpt:Sony:https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "name": "Sony WH-1000XM6",
+   "core_sku": true,
+   "currency": "USD",
+   "new_price": "379.99",
+   "our_price": "459.99",
+   "gap_pct": -17.4,
+   "history": [
+    "378.00",
+    "379.99"
+   ],
+   "flags": [],
+   "surface": "chatgpt",
+   "retailer": "Sony",
+   "live_price": "459.99",
+   "own_store": true
+  },
+  {
+   "id": "a5",
+   "kind": "ai_misquote",
+   "url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "offer_key": "google_ai_mode:Walmart:https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "name": "Sony WH-1000XM6",
+   "core_sku": true,
+   "currency": "USD",
+   "new_price": "444.00",
+   "our_price": "459.99",
+   "gap_pct": -3.1,
+   "history": [
+    "444.00",
+    "444.00"
+   ],
+   "flags": [],
+   "surface": "google_ai_mode",
+   "retailer": "Walmart",
+   "live_price": "458.00",
+   "own_store": false
+  },
+  {
+   "id": "a6",
+   "kind": "ai_misquote",
+   "url": "https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "offer_key": "chatgpt:Amazon:https://electronics.sony.com/audio/headphones/headband/p/wh1000xm6-b",
+   "name": "Sony WH-1000XM6",
+   "core_sku": true,
+   "currency": "USD",
+   "new_price": "489.99",
+   "our_price": "459.99",
+   "gap_pct": 7.0,
+   "history": [
+    "489.99",
+    "489.99"
+   ],
+   "flags": [],
+   "surface": "chatgpt",
+   "retailer": "Amazon",
+   "live_price": "458.00",
+   "own_store": false
+  }
+ ]
+}

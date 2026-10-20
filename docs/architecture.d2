@@ -1,0 +1,26 @@
+# Who does what in price-agent: Decodo collects, code computes, Claude judges, you approve.
+# Render: d2 --layout=elk --elk-nodeNodeBetweenLayers=30 --theme=0 --pad=30 docs/architecture.d2 docs/architecture.svg
+#         rsvg-convert -z 2 -b white docs/architecture.svg -o docs/architecture.png
+# Endpoints are declared crawl, map, scrape so that ELK draws them in step order: /map, /crawl, /scrape.
+direction: down
+classes: {
+  step: {style: {font-size: 32; border-radius: 6; stroke-width: 2}}
+  owner: {style: {font-size: 32; border-radius: 10; stroke-width: 2}}
+}
+api: Decodo Web Data API {
+  label.near: top-center
+  crawl: "/crawl\nprices" {class: step}
+  map: "/map\nnew SKUs" {class: step}
+  scrape: "/scrape\nAI answers" {class: step}
+  style: {font-size: 32; bold: true; border-radius: 10; stroke-width: 0; fill: "#E8F0FE"}
+}
+python: "Python code\nextract, diff, simple rules" {class: owner; style.fill: "#EEEEEE"}
+agent: "Claude\ndecides" {class: owner; style.fill: "#FCEBDD"}
+human: "You\napprove" {class: owner; style.fill: "#E3F4E6"}
+
+api.map -> python
+api.crawl -> python
+api.scrape -> python
+python -> agent: events {style.font-size: 28}
+agent -> human: alerts and proposals {style.font-size: 28}
+agent -> api.scrape: reverify {style: {stroke-dash: 5; font-size: 28}}
