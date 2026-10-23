@@ -131,4 +131,3 @@ The tests cover JSON-LD extraction on a real WooCommerce page, Shopify-style var
 | `src/price_agent/cli.py` | The `discover`, `track`, `demo`, `ai-shelf`, `eval`, and `serve` commands |
 | `scripts/make_fixture.py` | Builds `fixtures/snapshots.json` from a real crawl and adds the test day |
 | `scripts/build_demo_store.py` | Builds the static demo store |
-| `docs/architecture.d2` | The source of the diagram above, with its render commands |
