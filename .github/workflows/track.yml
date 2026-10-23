@@ -1,0 +1,29 @@
+name: track-prices
+
+on:
+  workflow_dispatch:  # run it from the Actions tab
+  # To run it daily in your copy, uncomment these 2 lines and add the secrets listed in the README:
+  # schedule:
+  #   - cron: "17 6 * * *"  # daily at 06:17 UTC
+
+permissions:
+  contents: write  # commits prices.db back, because each new runner starts with no price history
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: astral-sh/setup-uv@v6
+      - run: uv run price-agent track
+        env:
+          DECODO_API_KEY: ${{ secrets.DECODO_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+      - name: Commit the baseline
+        run: |
+          git config user.name "price-agent"
+          git config user.email "price-agent@users.noreply.github.com"
+          git add -f prices.db
+          git commit -m "Price snapshot $(date -u +%F)" || echo "No changes"
+          git push
