@@ -1,0 +1,8 @@
+.env
+.venv/
+prices.db
+__pycache__/
+*.pyc
+.DS_Store
+.pytest_cache/
+docs/architecture.svg
